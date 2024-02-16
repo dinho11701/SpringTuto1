@@ -62,7 +62,7 @@ public class FakePersonDataAccessService implements PersonDao{
             int indexPersonToDelet = DB.indexOf(person);
 
             if(indexPersonToDelet >= 0){
-                DB.set(indexPersonToDelet,person);
+                DB.set(indexPersonToDelet,new Person(id,person.getName()));
                 return 1;
             }
             return 0;
